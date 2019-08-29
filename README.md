@@ -38,11 +38,15 @@ If you have multiple screens, you will be able to clone this master image to avo
 1) Download the [latest version of Chilipie kiosk][chilipie-kiosk-download]
 2) Follow the [Getting started][chilipie-kiok-getting-started]
 
+## Other useful Chrome extensions
+
+* [Requestly][requestly-extension] can be uses to inject HTTP headers like Auth token for Grafana dashboards or other websites that require authentication
+* [Ignore X-Frame headers][ignore-x-frame-headers-extension] can help you if you need to `<iframe>` a site that doesn't want to be framed
+* [Tampermonkey][tampermonkey-extension] can be useful for injecting custom JS or CSS to a page you're displaying
+
 ## TODO
 
 * Finish the "How to start"
-* Add the Chrome extension that helps to load iframes
-* Add the Chrome extension that inject the HTTP headers (Grafana auth token for ex.)
 * Create an Ansible role to configure and maintain the RPi automatically instead of doing manual process
 
 [chilipie-kiosk-project]: https://github.com/futurice/chilipie-kiosk
@@ -51,3 +55,6 @@ If you have multiple screens, you will be able to clone this master image to avo
 [chromium-project]: https://www.chromium.org/
 [tab-rotate-project]: https://github.com/KevinSheedy/chrome-tab-rotate
 [tab-rotate-server-project]: https://github.com/timoa/chrome-tab-rotate-server
+[requestly-extension]: https://chrome.google.com/webstore/detail/requestly-redirect-url-mo/mdnleldcmiljblolnjhpnblkcekpdkpa
+[ignore-x-frame-headers-extension]: https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe
+[tampermonkey-extension]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
