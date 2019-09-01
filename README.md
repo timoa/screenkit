@@ -36,7 +36,7 @@ The following information will help you to create the first player. This will be
 If you have multiple screens, you will be able to clone this master image to avoid to redo this manual steps on the other players.
 
 1) Download the [latest version of Chilipie kiosk][chilipie-kiosk-download]
-2) Follow the [Getting started][chilipie-kiok-getting-started]
+2) Follow the [Getting started][chilipie-kiosk-getting-started]
 
 ## Other useful Chrome extensions
 
@@ -51,7 +51,7 @@ If you have multiple screens, you will be able to clone this master image to avo
 
 [chilipie-kiosk-project]: https://github.com/futurice/chilipie-kiosk
 [chilipie-kiosk-download]: https://github.com/futurice/chilipie-kiosk/releases
-[chilipie-kiok-getting-started]: https://github.com/futurice/chilipie-kiosk#getting-started
+[chilipie-kiosk-getting-started]: https://github.com/futurice/chilipie-kiosk#getting-started
 [chromium-project]: https://www.chromium.org/
 [tab-rotate-project]: https://github.com/KevinSheedy/chrome-tab-rotate
 [tab-rotate-server-project]: https://github.com/timoa/chrome-tab-rotate-server
