@@ -44,6 +44,32 @@ If you have multiple screens, you will be able to clone this master image to avo
 * [Ignore X-Frame headers][ignore-x-frame-headers-extension] can help you if you need to `<iframe>` a site that doesn't want to be framed
 * [Tampermonkey][tampermonkey-extension] can be useful for injecting custom JS or CSS to a page you're displaying
 
+## Howto
+
+Sometimes, the content (dashboards, websites, etc.) are not accessible without authentication.
+
+When possible, you can use Basic Auth, API Token (Bearer, etc.) and inject them in the HTTP headers, using the Chrome Extension [Requestly][requestly-extension] for example.
+
+Be careful to create users that have limited access (read only) to your accounts and save your credentials/api keys securely.
+
+### Grafana
+
+Grafana can use an API key to authenticates. You can create an API token on `Configuration` > `API Keys`.
+
+Give a `Key name` (screens for ex.) and role `Viewer` and set the `Time to live` between one month and one year, depending of your company policy.
+
+When it's done, save your `Key` into a safe place (1Password, etc.) and launch the Google profile created for your screens.
+
+Click on `New Rule` > `Modify Headers`.
+
+Set a `Rule Name` (Grafana) and in the `Header` field, add `Authorization`. On the `Value` field, set:
+
+``` text
+Bearer {put your API token here}
+```
+
+Set the last field with the URL of your Grafana instance to put this HTTP header only when the screens call Grafana.
+
 ## TODO
 
 * Finish the "How to start"
