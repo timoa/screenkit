@@ -33,16 +33,20 @@ You will need per screen:
 
 The following information will help you to create the first player. This will be your master image.
 
-If you have multiple screens, you will be able to clone this master image to avoid to redo this manual steps on the other players.
+If you have multiple screens, you will be able to clone this master image to avoid to redo these manual steps on the other players.
+
+### Chilipie Kiosk
 
 1) Download the [latest version of Chilipie kiosk][chilipie-kiosk-download]
 2) Follow the [Getting started][chilipie-kiosk-getting-started]
 
-## Other useful Chrome extensions
+### Google account
 
-* [Requestly][requestly-extension] can be uses to inject HTTP headers like Auth token for Grafana dashboards or other websites that require authentication
-* [Ignore X-Frame headers][ignore-x-frame-headers-extension] can help you if you need to `<iframe>` a site that doesn't want to be framed
-* [Tampermonkey][tampermonkey-extension] can be useful for injecting custom JS or CSS to a page you're displaying
+To be able to sync extensions and other settings between screens without the need to plug a mouse and keyboard, we use a dedicated Google account.
+
+// TODO: Add Google account creation steps
+
+All the screens that are connected to this Google Account will be sync and will received the extensions to install, configure them with the same settings and you can pilot the configuration from your own computer by switching between your Google user profile and the Google screens user profile.
 
 ## Howto
 
@@ -50,31 +54,24 @@ Sometimes, the content (dashboards, websites, etc.) are not accessible without a
 
 When possible, you can use Basic Auth, API Token (Bearer, etc.) and inject them in the HTTP headers, using the Chrome Extension [Requestly][requestly-extension] for example.
 
-Be careful to create users that have limited access (read only) to your accounts and save your credentials/api keys securely.
+Be careful to create users or API tokens that have limited access (read only) to your accounts and save your credentials/api keys securely.
 
-### Grafana
+### Contents
 
-Grafana can use an API key to authenticates. You can create an API token on `Configuration` > `API Keys`.
+* [Grafana][content-grafana]
 
-Give a `Key name` (screens for ex.) and role `Viewer` and set the `Time to live` between one month and one year, depending of your company policy.
+## Chrome extensions
 
-When it's done, save your `Key` into a safe place (1Password, etc.) and launch the Google profile created for your screens.
-
-Click on `New Rule` > `Modify Headers`.
-
-Set a `Rule Name` (Grafana) and in the `Header` field, add `Authorization`. On the `Value` field, set:
-
-``` text
-Bearer {put your API token here}
-```
-
-Set the last field with the URL of your Grafana instance to put this HTTP header only when the screens call Grafana.
+* [Requestly][requestly-extension] can be uses to inject HTTP headers like Auth token for Grafana dashboards or other websites that require authentication
+* [Ignore X-Frame headers][ignore-x-frame-headers-extension] can help you if you need to `<iframe>` a site that doesn't want to be framed
+* [Tampermonkey][tampermonkey-extension] can be useful for injecting custom JS or CSS to a page you're displaying
 
 ## TODO
 
 * Finish the "How to start"
 * Create an Ansible role to configure and maintain the RPi automatically instead of doing manual process
 
+[content-grafana]: /doc/contents/grafana.md
 [chilipie-kiosk-project]: https://github.com/futurice/chilipie-kiosk
 [chilipie-kiosk-download]: https://github.com/futurice/chilipie-kiosk/releases
 [chilipie-kiosk-getting-started]: https://github.com/futurice/chilipie-kiosk#getting-started
