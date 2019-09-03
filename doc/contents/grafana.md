@@ -1,11 +1,11 @@
 # Grafana
 
-||||
+| Item | Configuration | Comments |
 |---|---|---|
 | **Type** | Dashboards/Monitoring ||
 | **Auth** | API token ||
 | **Method** | HTTP Header injection ||
-| **Chrome extension** | Requestly ||
+| **Chrome ext.** | [Requestly][requestly-extension] ||
 
 ## Introduction
 
@@ -32,3 +32,5 @@ Grafana can use an API key to authenticates. You can create an API token on `Con
 9. On the `Value` field, set: `Bearer {put your API token here}`
 
 10. Set the last field with the URL of your Grafana instance to add this HTTP header only when the screens call your Grafana instance
+
+[requestly-extension]: https://chrome.google.com/webstore/detail/requestly-redirect-url-mo/mdnleldcmiljblolnjhpnblkcekpdkpa
